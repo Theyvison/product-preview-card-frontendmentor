@@ -1,0 +1,163 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --button-hover: hsl(157, 47%, 18%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 1.6rem;
+  height: 100vh;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+}
+
+body * {
+  font-family: "Montserrat", sans-serif;
+}
+
+.card {
+  max-width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.image-wrapper {
+  background: url(images/image-product-desktop.jpg) no-repeat left center/cover;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.mobile-image-wrapper img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.texts {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.texts span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--dark-grayish-blue);
+}
+
+.texts h1 {
+  max-width: 18rem;
+  font-family: "Fraunces", serif;
+  color: var(--very-dark-blue);
+  font-size: 2.6rem;
+}
+
+.texts p {
+  max-width: 25rem;
+  color: var(--dark-grayish-blue);
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price span {
+  letter-spacing: normal;
+}
+
+span.new {
+  color: var(--dark-cyan);
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+}
+
+span.old {
+  text-decoration: line-through;
+}
+
+button {
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  padding: 1.4rem 0;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--dark-cyan);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: filter 0.2s;
+}
+
+.attribution a:hover {
+  filter: brightness(1.4);
+}
+
+@media (min-width: 500px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mobile-image-wrapper {
+    display: none;
+  }
+
+  .image-wrapper {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 100%;
+  }
+}
